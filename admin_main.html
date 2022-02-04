@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 센터 | 메인</title>
+    <link rel="stylesheet" href="./css/admin_main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/admin_main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="header_inner">
+                <div class="img"></div><span>관리자 센터</span>
+            </div>
+        </header>
+        <div id="container">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <p class="nav1"><a href="./admin_main.html">메인페이지</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav2"><a href="#">운항스케줄</a></p>
+                        <li><a href="./schedule/aircraft_list.html">- 항공기 정보 조회</a></li>
+                        <li><a href="./schedule/sc_list.html">- 운항스케줄 조회</a></li>
+                        <li><a href="./schedule/sc_regist.html">- 운항 스케줄 등록</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav3"><a href="#">예약 조회</a></p>
+                        <li><a href="../reservation/rs_index.html">- 운항 별 예약자 조회</a></li>
+                        <li><a href="../reservation/rs_sch.html">- 예약자 명 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav4"><a href="#">고객관리</a></p>
+                        <li><a href="../cm/cm_list.html">- 고객 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav5"><a href="#">유실물 관리</a></p>
+                        <li><a href="./item/item.html">- 유실물 조회</a></li>
+                        <li><a href="./item/itemadd.html">- 유실물 등록</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav6"><a href="./notice/notice.html">공지사항</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav7"><a href="#">문의</a></p>
+                        <li><a href="./inquiry/qna_main.html">- Q&A 관리</a></li>
+                        <li><a href="./inquiry/faq_main.html">- FAQ 관리</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav8"><a href="./event/evn_ing.html">이벤트</a></p>
+                    </ul>
+                    <ul>
+                        <p class="nav9"><a href="#">나비 포인트</a></p>
+                        <li><a href="./point/pointadd.html">- 지니 포인트 등록</a></li>
+                        <li><a href="./point/usepointlist.html">- 포인트 사용 내역 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav10"><a href="#">지니 쿠폰</a></p>
+                        <li><a href="./coupon/couponadd.html">- 지니 쿠폰 발급</a></li>
+                        <li><a href="./coupon/usecouponlist.html">- 지니 쿠폰 사용 내역 조회</a></li>
+                    </ul>
+                    <ul>
+                        <p class="nav11"><a href="#">지니 매거진</a></p>
+                        <li><a href="./magazine/genieList.html">- 매거진 등록</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contents">
+                <div class="contwrap">
+                    <div class="topcont">
+                        <div class="weather">날씨 API가 동적 홈페이지에서 가능한가봐요.. 백단에서 해볼게요.. <br>세계시간도 동적하서 자바 활용해서... 하겠습니당.. 무리데쓰..</div>
+                        <div class="korea">
+                            <div class="korea_name">대한민국</div>
+                            <div id="korea_time"></div>
+                        </div>
+                        <div class="other">
+                            <div class="other_name">
+                                <select name="other_select" class="other_select" id="other_select">
+                                    <option value="">국가 선택</option>
+                                    <option value="베이징">베이징</option>
+                                    <option value="하노이">하노이</option>
+                                    <option value="두바이">두바이</option>
+                                    <option value="도하">도하</option>
+                                    <option value="카이로">카이로</option>
+                                    <option value="부다페스트" selected>부다페스트</option>
+                                    <option value="런던">런던</option>
+                                    <option value="뉴욕">뉴욕</option>
+                                </select>
+                            </div>
+                            <div id="other_time"></div>
+                        </div>
+                    </div>
+                    <div class="bottcont">
+                        <div class="QnA">
+                            <p><a href="#">Q&A</a></p> 
+                            <p>새로 등록된 게시글 : (75)개</p>
+                            <table>
+                                <tr>
+                                    <td><a href="#">문의드립니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">문의</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">수하물관련 문의</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">부가서비스 신청하고싶습니다. 답변 바랍니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">공항 이용 불만 제언하고자합니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">항공권 관련 문의드립니다. 답변 바랍니다.</a></td>
+                                    <td>답변 불필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">항공권 관련 문의드립니다. 답변 바랍니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">예약 관련 문의드립니다.</a></td>
+                                    <td>답변 불필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">유실물 관련 문의드립니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">지니 포인트 관련 문의드립니다.</a></td>
+                                    <td>답변 필요</td>
+                                </tr>
+                            </table>
+                            <p><a href="#">more</a></p>
+                        </div>
+                        <div class="totalair">
+                            <div class="totalair_top">
+                                <a href="#" class="left"><img src="./img/left_cal.png" alt="왼쪽 버튼"></a>
+                                <span class="cal">2022-01-28</span>
+                                <a href="#" class="right"><img src="./img/right_cal.png" alt=""></a>
+                            </div>
+                            <div class="totalair_mib">
+                                <p>총 항공편</p>
+                                <p class="totcount">26</p>
+                                <div>
+                                    <p class="incount">18</p>
+                                    <p class="outcount">8</p>
+                                </div>
+                                <div>
+                                    <p class="inname">국내</p>
+                                    <p class="outname">국외</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="totaluser">
+                            <div class="totalair_top">
+                                <a href="#" class="left"><img src="./img/left_cal.png" alt="왼쪽 버튼"></a>
+                                <span class="cal">2022-01-28</span>
+                                <a href="#" class="right"><img src="./img/right_cal.png" alt=""></a>
+                            </div>
+                            <div class="totalair_mib">
+                                <p>총 이용객</p>
+                                <p class="totcount">875</p>
+                                <div>
+                                    <p class="incount">683</p>
+                                    <p class="outcount">192</p>
+                                </div>
+                                <div>
+                                    <p class="inname">국내</p>
+                                    <p class="outname">국외</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="itemmd">
+                            <div>
+                                <p class="item_md"><a href="#">유실물 관리</a></p> 
+                                <p>새로 등록된 유실물 : (2)개</p>
+                                <table>
+                                    <tr>
+                                        <th>출발일</th>
+                                        <th>물품명</th>
+                                        <th>항공편</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-01-28</td>
+                                        <td>시계</td>
+                                        <td>LJ432</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-01-28</td>
+                                        <td>모자</td>
+                                        <td>LJ477</td>
+                                    </tr>
+                                </table>
+                                <p><a href="#">more</a></p>
+                            </div>
+                            <div>
+                                <p>유실물 수령 신청 건 : (3)개</p>
+                                <table>
+                                    <tr>
+                                        <th>출발일</th>
+                                        <th>물품명</th>
+                                        <th>항공편</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-01-28</td>
+                                        <td>시계</td>
+                                        <td>LJ432</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-01-28</td>
+                                        <td>모자</td>
+                                        <td>LJ477</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2022-01-28</td>
+                                        <td>가방</td>
+                                        <td>LJ472</td>
+                                    </tr>
+                                </table>
+                                <p><a href="#">more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
